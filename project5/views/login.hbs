@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+              <link rel="stylesheet" href="/static/style.css" />
+
+    <style>
+      input {
+        margin: 4px;
+        width: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    {{#if errorMsg}}
+
+<div id="logindiv" class="logindiv">
+ <form action="/login-user" method="POST">
+     <fieldset style="width: 290px;;">
+<legend id="lu"><b style="color: red;">{{errorMsg}}!</b></legend>
+    <label style="margin-bottom: 8px;" for="username" id="username">
+        <b>Username</b></label> 
+    <input type="text"  name="username" id="username"> <br> 
+<br>
+    <label style="margin-bottom: 8px;" for="password" id="password">
+        <b>Password</b></label>
+    <input type="password" id="password" name="password"> <br><br>
+    <input type="submit" id="login" value="Log in"/> 
+    </fieldset>
+            </form>
+        </div>
+
+  {{else}} 
+  <div id="logindiv" class="logindiv">
+ <form action="/login-user" method="POST">
+     <fieldset style="width: 290px;;">
+<legend id="lu"><b>Log in</b></legend>
+    <label style="margin-bottom: 8px;" for="username" id="username">
+        <b>Username</b></label> 
+    <input type="text"  name="username" id="username"> <br> <br>
+
+    <label style="margin-bottom: 8px;" for="password" id="password">
+        <b>Password</b></label>
+    <input type="password" id="password" name="password"> <br>
+<br>
+    <input type="submit" id="login" value="Log in"/> 
+    </fieldset>
+            </form>
+        </div>
+        {{/if}}
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+        <h4 > <a href="/addmeal">Adding meal package</a> </h4>
+
+          <link rel="stylesheet" href="/static/style.css" />
+
+    <style>
+      input {
+        margin: 4px;
+        width: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    {{#if errorMsg}}
+
+<div id="registrdiv" class="registrdiv">
+ <form action="/register-user" method="POST">
+     <fieldset style="width: 290px;;">
+<legend id="ca"><b style="color: red;">{{errorMsg}}!</b></legend>
+
+ <label style="margin-bottom: 8px;" for="name" id="name">
+        <b>Name</b></label> 
+    <input type="text"  name="name" id="name"> <br> 
+
+
+    <label style="margin-bottom: 8px;" for="username" id="username">
+        <b>Username</b></label> 
+    <input type="text"  name="username" id="username"> <br> 
+
+ <label style="margin-bottom: 8px;" for="email" id="email">
+        <b>Email</b></label> 
+    <input type="text"  name="email" id="email"> <br> 
+
+    <label style="margin-bottom: 8px;" for="password" id="password">
+        <b>Password</b></label>
+    <input type="password" id="password" name="password"> <br>
+
+    <input type="submit" id="signup" value="Sign up"/> 
+    </fieldset>
+            </form>
+        </div>
+
+  {{else}} 
+  <div id="registrdiv" class="registrdiv">
+ <form action="/register-user" method="POST">
+     <fieldset style="width: 290px;;">
+<legend id="ca"><b>Sign up</b></legend>
+  <label style="margin-bottom: 8px;" for="name" id="name">
+        <b>Name</b></label> 
+    <input type="text"  name="name" id="name"> <br> 
+
+
+    <label style="margin-bottom: 8px;" for="username" id="username">
+        <b>Username</b></label> 
+    <input type="text"  name="username" id="username"> <br> 
+
+ <label style="margin-bottom: 8px;" for="email" id="email">
+        <b>Email</b></label> 
+    <input type="text"  name="email" id="email"> <br> 
+
+    <label style="margin-bottom: 8px;" for="password" id="password">
+        <b>Password</b></label>
+    <input type="password" id="password" name="password"> <br>
+<br>
+    <input type="submit" id="signup" value="Sign up"/> 
+    </fieldset>
+            </form>
+        </div>
+        {{/if}}
+
+
+  </body>
+</html>

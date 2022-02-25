@@ -1,0 +1,71 @@
+label{
+    display: block;
+    margin-bottom: 9px;
+}
+
+#registrdiv, #logindiv{
+    margin-left: 99px;
+}
+
+
+
+#signup, #login{
+    background-size: 70px; background-color:rgb(213, 47, 92); color: white;
+margin-top: 10px;
+}
+
+#ca{
+    color: brown;
+} 
+#logo{
+    width: 80px; height: 80px; margin-left: 0px;
+}
+
+#prev-cost{
+  text-decoration: line-through;
+color: #7a7a7a;
+font-family: PulpDisplay-Regular;
+text-shadow: none;
+font-weight: 400;
+font-size: 15px;
+}
+.products  {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  height: 60px;
+  overflow: auto;
+  color: blanchedalmond;
+  }
+
+
+.hero {
+    width: 1100px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('https://media.istockphoto.com/photos/cheese-cake-with-strawberry-ice-cream-on-top-picture-id682539098?b=1&amp;k=20&amp;m=682539098&amp;s=170667a&amp;w=0&amp;h=32afi9t2RWzA_uPczNthPx1i5uuo7-Sebics-HiWISw=');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.hero1 {
+  width: 1100px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('https://media.istockphoto.com/photos/fiesta-mexicana-mexican-fiesta-outdoors-tortilla-chips-beef-with-picture-id1227595910?b=1&k=20&m=1227595910&s=170667a&w=0&h=taEdoekSdssiCUXAam2r9g7LUD_wk4BldHrtmoTRPdo=');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+
+

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+ <head>
+    <link rel="stylesheet" href="/static/style.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+
+<header style="margin-top: 20px;">
+
+    <div class="logo">
+            <img id="logo" style="float: left;" src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/820/6129147820_d1c6c4b1-1450-4b61-ae26-860288005be5.png?cb=1633203704" alt="">
+            <h2 style="margin-left: 350px;">Villa Food restaraunt</h2>
+        </div>
+
+        <nav style="display: block;">
+        <ul style="margin-left: 350px;">
+        </ul>
+    </nav>
+    <br><br>
+    <section class="hero">   
+        <h1 >Villa Food restaraunt and delivery</h1>
+    <br> 
+    </section>
+    <br><br>
+
+   <div class="foodyouwant">
+    <h1 style="text-align: center; color: darkred;">Food You Want</h1>
+    <h4 style="color: darkmagenta; float: left; text-align: center;">Mealtimes are more than food. They’re time to relax. Sometimes that means recharging all by yourself, other times it’s about connecting with friends and family. However you eat your meals, we’re here to make it as easy as it is delicious.
+    <h5>Taken from <a href="livefitfood.ca">livefitfood</a>.</h5> </h4>
+
+
+    <h1 style="text-align: center; color: darkred;">Amazing Chefs</h1>
+    <h4 style="color: darkmagenta; float: left; text-align: center;"> Our chefs create dishes they love in our local kitchens. 
+        Each chef has their own style, which brings tons
+        of variety to our menu, from juicy roast chicken to pan-seared salmon. Once it’s ready to head your way, we chill the food to keep it fresh.</h4>
+        <h5>Taken from <a href="livefitfood.ca">livefitfood</a>.</h5> </h4>
+
+
+  <img src="/static/images/img.jpg" alt="">
+</div>
+</header>
+ </head>
+
+ <body>
+     <h1>{{nameOfPackage}}</h1>
+    <section class="content">
+        <br><br>
+        
+        <br>
+        
+
+
+
+            <div class="wrapper">
+             {{#if errorMsg}}
+
+<div id="addmeal" class="addmeal">
+ <form action="/add-meals" method="POST">
+     <fieldset style="width: 490px;">
+<legend id="ca" style="text-align:center">   <h2 style=" color: red;">{{errorMsg}}</h2>
+</legend>
+<div style="margin-left: 1cm;">
+ <label style="margin-bottom: 8px;" for="name" id="name">
+        <b>Name of the package</b></label> 
+    <input type="text"  name="name" id="name" style="width: 350px;"> <br> 
+
+
+    <label style="margin-bottom: 8px;" for="price" id="price">
+        <b>Price of the package</b></label> 
+    <input type="text"  name="price" id="price" style="width: 150px;"> <br> 
+
+
+ <label style="margin-bottom: 8px; width:24cm;" for="description" id="description">
+        <b>Description/details</b></label> 
+    <textarea style="width: 550px; height: 100px" type="text" 
+     name="description" id="description"> </textarea><br> 
+
+
+    <label style="margin-bottom: 8px;" for="foodcategory" id="foodcategory">
+        <b>Add food category</b></label>
+    <input type="text" id="foodcategory" name="foodcategory"> <br>
+
+<label style="margin-bottom: 8px;" for="numOfMeals" id="numOfMeals">
+        <b>Enter the number of meals in the package</b></label>
+    <input type="text" id="numOfMeals" name="numOfMeals"> <br>
+
+<label style="margin-bottom: 8px;" for="picture" id="picture">
+        <b>Upload a picture of your meal package</b></label>
+    <input type="text" id="picture" name="picture"> <br>
+
+
+    <input type="submit" id="submit" value="Submit"/> 
+    </div>
+    </fieldset>
+            </form>
+        </div>
+  {{else}} 
+  <div id="addmeal" class="addmeal">
+ <form action="/add-meals" method="POST">
+     <fieldset style="width: 490px;">
+<legend id="ca" style="text-align:center">   <h2 style=" color: coral;">Enter meal package data</h2>
+</legend>
+<div style="margin-left: 1cm;">
+ <label style="margin-bottom: 8px;" for="name" id="name">
+        <b>Name of the package</b></label> 
+    <input type="text"  name="name" id="name" style="width: 350px;"> <br> 
+
+
+    <label style="margin-bottom: 8px;" for="price" id="price">
+        <b>Price of the package</b></label> 
+    <input type="text"  name="price" id="price" style="width: 150px;"> <br> 
+
+
+ <label style="margin-bottom: 8px; width:24cm;" for="description" id="description">
+        <b>Description/details</b></label> 
+    <textarea style="width: 550px; height: 100px" type="text"  name="description" id="description"> </textarea><br> 
+
+
+    <label style="margin-bottom: 8px;" for="foodcategory" id="foodcategory">
+        <b>Add food category</b></label>
+    <input type="text" id="foodcategory" name="foodcategory"> <br>
+
+<label style="margin-bottom: 8px;" for="numOfMeals" id="numOfMeals">
+        <b>Enter the number of meals in the package</b></label>
+    <input type="text" id="numOfMeals" name="numOfMeals"> <br>
+
+<label style="margin-bottom: 8px;" for="picture" id="picture">
+        <b>Upload a picture of your meal package</b></label>
+    <input type="file" id="picture" name="picture"> <br>
+
+
+    <input type="submit" id="submit" value="Submit"/> 
+    </div>
+    </fieldset>
+            </form>
+        </div>
+        {{/if}}
+
+
+              </div>
+              
+            </section>
+
+
+<footer >
+
+    <h4 style="float: left;">© 2021 LiveFit North America Inc.</h4>
+
+
+    <h4 style="margin-left: 500px;" >
+        Follow us on Instagram, Facebook and Telegram! - <a href="facebook.com">facebook.com</a>
+    </h4>
+  
+
+</footer>
+            
+ </body>
+</html>
